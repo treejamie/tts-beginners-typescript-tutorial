@@ -6,20 +6,21 @@ import { Equal, Expect } from "./helpers/type-utils";
  * make it more DRY?
  */
 
-interface User {
+interface ThingWithId {
   id: string;
+}
+
+interface User extends ThingWithId {
   firstName: string;
   lastName: string;
 }
 
-interface Post {
-  id: string;
+interface Post extends ThingWithId {
   title: string;
   body: string;
 }
 
-interface Comment {
-  id: string;
+interface Comment extends ThingWithId {
   comment: string;
 }
 
